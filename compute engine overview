@@ -1,0 +1,29 @@
+                                                             Google Compute Engine
+
+In data corporate data centres applications are deployed in physical servers. If we wanted to deploy application in cloud environments we need Virtual Machines(VMs). VMs are abstraction of physical servers. They are essentially programs that emulate the physical servers and provide CPU, memory, storage and other services. VMs run within in a low level service called hypervisor. Hypervisors can run multiple operating systems referred to as guest operating system(guest OS), while keeping the activities of each, isolated from other guest operating systems. Each instance of an executing guest operating system is a VM instance.
+
+Customers can create and manage VMs in Google Cloud Platform(GCP) using Google Compute Engine. Compute Engine is an Infrastructure as a Service(IaaS)  component in GCP. It means Users can choose the operating system to run, which packages to install, and when to back up and perform other maintenance operations. This model gives the cloud user the greatest control of all the computing services.
+
+When to use Compute Engine:
+•	Need complete control
+•	Need to make OS-level modifications
+•	Need to move from desktop or data centre to cloud without code rewrite
+•	Desire to use customized virtualized environment
+
+There are several ways one can virtualize an environment in Compute Engine. For that we need to know the fundamental concepts in compute engine. In GCP virtual machines are called instances. VMs run in a zone and region. Zones are data-centre like resources, but they may be comprised of one or more loosely coupled data centres. Zones are located within regions. A region is a geographical location. When Configuring VM you must determine the following parameters.
+
+Main Virtual Machine Configuration Details:
+•	Name – Name of the VM
+•	Region and Zone where the VM will run
+•	Machine Type, which determines the number of CPUs and the amount of memory in the VM
+•	Boot Disk, which includes the operating system the VM will run
+
+These are the main parameters you need to configure while creating a VM. Remaining parameters will have default values. Then we can click create to create an instance. The instance will be up. There are several ways to interact with compute engine instances: the gcloud CLI,  a REST API, and the console.
+The console is a graphical interface that is straightforward to use, although encumbered by UI operations. The gcloud CLI tool is accessible on all Compute Engine VMs when started through the console's ssh option. The gcloud tools can also be installed onto any Compute Engine VM if you need to connect directly through SSH or some other means. Finally, there is a REST API that can be used to manage Compute Engine VMs.
+
+Cost of Virtual Machines 
+•	VMs are billed in 1-second increments. 
+•	The cost is based on machine type. The more CPUs and memory used, the higher the cost. 
+•	Google offers discounts for sustained usage.
+•	VMs are charged for a minimum of 1 minute of use.
+•	Preemptible VMs can save you up to 80 percent of the cost of a VM. 
